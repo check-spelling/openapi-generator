@@ -905,10 +905,10 @@ Here is a list of template creators:
    * Java (Rest-assured): @viclovsky
    * Java (Java 11 Native HTTP client): @bbdouglas
    * Java (Apache HttpClient): @harrywhite4
-   * Javascript/NodeJS: @jfiala
-   * Javascript (Apollo DataSource): @erithmetic
-   * Javascript (Closure-annotated Angular) @achew22
-   * Javascript (Flow types) @jaypea
+   * JavaScript/NodeJS: @jfiala
+   * JavaScript (Apollo DataSource): @erithmetic
+   * JavaScript (Closure-annotated Angular) @achew22
+   * JavaScript (Flow types) @jaypea
    * JMeter: @davidkiss
    * Kotlin: @jimschubert [:heart:](https://www.patreon.com/jimschubert)
    * Kotlin (MultiPlatform): @andrewemery
@@ -1070,7 +1070,7 @@ If you want to join the committee, please kindly apply by sending an email to te
 | Kotlin            | @jimschubert (2017/09) [:heart:](https://www.patreon.com/jimschubert), @dr4ke616 (2018/08) @karismann (2019/03) @Zomzog (2019/04) @andrewemery (2019/10) @4brunu (2019/11) @yutaka0m (2020/03)                                                        |
 | Lua               | @daurnimator (2017/08)                                                                                                                                                                                                            |
 | Nim               |                                                                                                                                                                                                                                   |
-| NodeJS/Javascript | @CodeNinjai (2017/07) @frol (2017/07) @cliffano (2017/07)                                                                                                                                                                         |
+| NodeJS/JavaScript | @CodeNinjai (2017/07) @frol (2017/07) @cliffano (2017/07)                                                                                                                                                                         |
 | ObjC              |                                                                                                                                                                                                                                   |
 | OCaml             | @cgensoul (2019/08)                                                                                                                                                                                                               |
 | Perl              | @wing328 (2017/07) [:heart:](https://www.patreon.com/wing328) @yue9944882 (2019/06)                                                                                                                                               |

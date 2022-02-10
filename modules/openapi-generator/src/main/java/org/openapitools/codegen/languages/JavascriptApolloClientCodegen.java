@@ -37,9 +37,9 @@ import java.util.*;
 
 import static org.openapitools.codegen.utils.StringUtils.*;
 
-public class JavascriptApolloClientCodegen extends DefaultCodegen implements CodegenConfig {
+public class JavaScriptApolloClientCodegen extends DefaultCodegen implements CodegenConfig {
     @SuppressWarnings("hiding")
-    private final Logger LOGGER = LoggerFactory.getLogger(JavascriptApolloClientCodegen.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(JavaScriptApolloClientCodegen.class);
 
     public static final String PROJECT_NAME = "projectName";
     public static final String MODULE_NAME = "moduleName";
@@ -86,7 +86,7 @@ public class JavascriptApolloClientCodegen extends DefaultCodegen implements Cod
     protected String npmRepository = null;
     private String modelPropertyNaming = "camelCase";
 
-    public JavascriptApolloClientCodegen() {
+    public JavaScriptApolloClientCodegen() {
         super();
 
         modifyFeatureSet(features -> features.includeDocumentationFeatures(DocumentationFeature.Readme));
@@ -100,8 +100,8 @@ public class JavascriptApolloClientCodegen extends DefaultCodegen implements Cod
         modelTestTemplateFiles.put("model_test.mustache", ".js");
         apiTemplateFiles.put("api.mustache", ".js");
         apiTestTemplateFiles.put("api_test.mustache", ".js");
-        // subfolder Javascript/es6
-        embeddedTemplateDir = templateDir = "Javascript-Apollo";
+        // subfolder JavaScript/es6
+        embeddedTemplateDir = templateDir = "JavaScript-Apollo";
         apiPackage = "api";
         modelPackage = "model";
         modelDocTemplateFiles.put("model_doc.mustache", ".md");
@@ -821,7 +821,7 @@ public class JavascriptApolloClientCodegen extends DefaultCodegen implements Cod
         if (allDefinitions != null && codegenModel != null && codegenModel.parent != null && codegenModel.hasEnums) {
             final Schema parentModel = allDefinitions.get(codegenModel.parentSchema);
             final CodegenModel parentCodegenModel = super.fromModel(codegenModel.parent, parentModel);
-            codegenModel = JavascriptApolloClientCodegen.reconcileInlineEnums(codegenModel, parentCodegenModel);
+            codegenModel = JavaScriptApolloClientCodegen.reconcileInlineEnums(codegenModel, parentCodegenModel);
         }
         if (ModelUtils.isArraySchema(model)) {
             ArraySchema am = (ArraySchema) model;

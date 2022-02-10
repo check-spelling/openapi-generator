@@ -36,9 +36,9 @@ import java.util.*;
 
 import static org.openapitools.codegen.utils.StringUtils.*;
 
-public class JavascriptClientCodegen extends DefaultCodegen implements CodegenConfig {
+public class JavaScriptClientCodegen extends DefaultCodegen implements CodegenConfig {
     @SuppressWarnings("hiding")
-    private final Logger LOGGER = LoggerFactory.getLogger(JavascriptClientCodegen.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(JavaScriptClientCodegen.class);
 
     public static final String PROJECT_NAME = "projectName";
     public static final String MODULE_NAME = "moduleName";
@@ -93,7 +93,7 @@ public class JavascriptClientCodegen extends DefaultCodegen implements CodegenCo
     protected String npmRepository = null;
     private String modelPropertyNaming = "camelCase";
 
-    public JavascriptClientCodegen() {
+    public JavaScriptClientCodegen() {
         super();
 
         modifyFeatureSet(features -> features.includeDocumentationFeatures(DocumentationFeature.Readme));
@@ -103,8 +103,8 @@ public class JavascriptClientCodegen extends DefaultCodegen implements CodegenCo
         modelTestTemplateFiles.put("model_test.mustache", ".js");
         apiTemplateFiles.put("api.mustache", ".js");
         apiTestTemplateFiles.put("api_test.mustache", ".js");
-        // subfolder Javascript/es6
-        embeddedTemplateDir = templateDir = "Javascript" + File.separator + "es6";
+        // subfolder JavaScript/es6
+        embeddedTemplateDir = templateDir = "JavaScript" + File.separator + "es6";
         apiPackage = "api";
         modelPackage = "model";
         modelDocTemplateFiles.put("model_doc.mustache", ".md");
@@ -456,10 +456,10 @@ public class JavascriptClientCodegen extends DefaultCodegen implements CodegenCo
     public void setUseES6(boolean useES6) {
         this.useES6 = useES6;
         if (useES6) {
-            embeddedTemplateDir = templateDir = "Javascript/es6";
+            embeddedTemplateDir = templateDir = "JavaScript/es6";
             LOGGER.info("Using JS ES6 templates");
         } else {
-            embeddedTemplateDir = templateDir = "Javascript";
+            embeddedTemplateDir = templateDir = "JavaScript";
             LOGGER.info("Using JS ES5 templates");
         }
     }
@@ -877,7 +877,7 @@ public class JavascriptClientCodegen extends DefaultCodegen implements CodegenCo
         if (allDefinitions != null && codegenModel != null && codegenModel.parent != null && codegenModel.hasEnums) {
             final Schema parentModel = allDefinitions.get(codegenModel.parentSchema);
             final CodegenModel parentCodegenModel = super.fromModel(codegenModel.parent, parentModel);
-            codegenModel = JavascriptClientCodegen.reconcileInlineEnums(codegenModel, parentCodegenModel);
+            codegenModel = JavaScriptClientCodegen.reconcileInlineEnums(codegenModel, parentCodegenModel);
         }
         if (ModelUtils.isArraySchema(model)) {
             ArraySchema am = (ArraySchema) model;

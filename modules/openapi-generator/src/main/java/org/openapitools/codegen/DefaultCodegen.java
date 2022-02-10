@@ -2021,7 +2021,7 @@ public class DefaultCodegen implements CodegenConfig {
 
     /**
      * Return the property initialized from a data object
-     * Useful for initialization with a plain object in Javascript
+     * Useful for initialization with a plain object in JavaScript
      *
      * @param name   Name of the property object
      * @param schema Property schema
