@@ -105,7 +105,7 @@ public class JavaVertXWebServerCodegen extends AbstractJavaCodegen {
         String sourcePackageFolder = sourceFolder + File.separator + invokerPackage.replace(".", File.separator);
         supportingFiles.clear();
         supportingFiles.add(new SupportingFile("supportFiles/openapi.mustache", resourceFolder, "openapi.yaml"));
-        supportingFiles.add(new SupportingFile("supportFiles/HttpServerVerticle.mustache", sourcePackageFolder, "HttpServerVerticle.java"));
+        supportingFiles.add(new SupportingFile("supportFiles/HttpServerVertical.mustache", sourcePackageFolder, "HttpServerVertical.java"));
         supportingFiles.add(new SupportingFile("supportFiles/ApiResponse.mustache", sourcePackageFolder, "ApiResponse.java"));
         supportingFiles.add(new SupportingFile("supportFiles/pom.mustache", "", "pom.xml"));
 

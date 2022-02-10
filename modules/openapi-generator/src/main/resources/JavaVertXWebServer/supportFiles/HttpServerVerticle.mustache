@@ -1,6 +1,6 @@
 package {{invokerPackage}};
 
-import io.vertx.core.AbstractVerticle;
+import io.vertx.core.AbstractVertical;
 import io.vertx.core.Promise;
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.ext.web.Router;
@@ -13,9 +13,9 @@ import org.slf4j.LoggerFactory;
 import {{apiPackage}}.{{classname}}Handler;
 import {{apiPackage}}.{{classname}}Impl;{{/apis}}{{/apiInfo}}
 
-public class HttpServerVerticle extends AbstractVerticle {
+public class HttpServerVertical extends AbstractVertical {
 
-    private static final Logger logger = LoggerFactory.getLogger(HttpServerVerticle.class);
+    private static final Logger logger = LoggerFactory.getLogger(HttpServerVertical.class);
     private static final String specFile = "src/main/resources/openapi.yaml";
 
     {{#apiInfo}}{{#apis}}
@@ -42,8 +42,8 @@ public class HttpServerVerticle extends AbstractVerticle {
                     .requestHandler(router)
                     .listen(8080)
             )
-            .onSuccess(server -> logger.info("Http verticle deploy successful"))
-            .onFailure(t -> logger.error("Http verticle failed to deploy", t))
+            .onSuccess(server -> logger.info("Http vertical deploy successful"))
+            .onFailure(t -> logger.error("Http vertical failed to deploy", t))
             // Complete the start promise
             .<Void>mapEmpty().onComplete(startPromise);
     }

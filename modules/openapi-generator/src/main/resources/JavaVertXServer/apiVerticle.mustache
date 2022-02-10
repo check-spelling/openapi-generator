@@ -1,6 +1,6 @@
 package {{package}};
 
-import io.vertx.core.AbstractVerticle;
+import io.vertx.core.AbstractVertical;
 import io.vertx.core.eventbus.Message;
 import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonArray;
@@ -14,19 +14,19 @@ import io.vertx.core.logging.LoggerFactory;
 import java.util.List;
 import java.util.Map;
 
-public class {{classname}}Verticle extends AbstractVerticle {
-    static final Logger LOGGER = LoggerFactory.getLogger({{classname}}Verticle.class);
+public class {{classname}}Vertical extends AbstractVertical {
+    static final Logger LOGGER = LoggerFactory.getLogger({{classname}}Vertical.class);
 
     {{#operations}}{{#operation}}{{#vendorExtensions}}static final String {{x-serviceid-varname}} = "{{x-serviceid}}";
     {{/vendorExtensions}}{{/operation}}{{/operations}}
     final {{classname}} service;
 
-    public {{classname}}Verticle() {
+    public {{classname}}Vertical() {
         try {
             Class serviceImplClass = getClass().getClassLoader().loadClass("{{package}}.{{classname}}Impl");
             service = ({{classname}})serviceImplClass.newInstance();
         } catch (Exception e) {
-            logUnexpectedError("{{classname}}Verticle constructor", e);
+            logUnexpectedError("{{classname}}Vertical constructor", e);
             throw new RuntimeException(e);
         }
     }

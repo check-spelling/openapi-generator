@@ -88,10 +88,10 @@ public class KotlinVertxServerCodegen extends AbstractKotlinCodegen {
         apiTemplateFiles.clear();
         apiTemplateFiles.put("api.mustache", ".kt");
         apiTemplateFiles.put("apiProxy.mustache", "VertxProxyHandler.kt");
-        apiTemplateFiles.put("api_verticle.mustache", "Verticle.kt");
+        apiTemplateFiles.put("api_vertical.mustache", "Vertical.kt");
 
         embeddedTemplateDir = templateDir = "kotlin-vertx-server";
-        apiPackage = rootPackage + ".verticle";
+        apiPackage = rootPackage + ".vertical";
         modelPackage = rootPackage + ".model";
         artifactId = "openapi-kotlin-vertx-server";
         artifactVersion = apiVersion;

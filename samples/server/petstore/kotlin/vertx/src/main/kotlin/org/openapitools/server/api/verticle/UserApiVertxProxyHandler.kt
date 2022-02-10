@@ -1,4 +1,4 @@
-package org.openapitools.server.api.verticle
+package org.openapitools.server.api.vertical
 
 import io.vertx.core.Vertx
 import io.vertx.core.eventbus.Message
