@@ -1,13 +1,13 @@
 package {{package}}
 import io.vertx.core.Vertx
-import io.vertx.core.AbstractVerticle
+import io.vertx.core.AbstractVertical
 import io.vertx.serviceproxy.ServiceBinder
 
 fun main(){
-    Vertx.vertx().deployVerticle({{classname}}Verticle())
+    Vertx.vertx().deployVertical({{classname}}Vertical())
 }
 
-class {{classname}}Verticle:AbstractVerticle() {
+class {{classname}}Vertical:AbstractVertical() {
 
     override fun start() {
         val instance = (javaClass.classLoader.loadClass("{{package}}.{{classname}}Impl").newInstance() as {{classname}})

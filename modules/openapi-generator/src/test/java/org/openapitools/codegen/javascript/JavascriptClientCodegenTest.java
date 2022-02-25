@@ -21,15 +21,15 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.media.Schema;
 import org.openapitools.codegen.*;
-import org.openapitools.codegen.languages.JavascriptClientCodegen;
+import org.openapitools.codegen.languages.JavaScriptClientCodegen;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class JavascriptClientCodegenTest {
+public class JavaScriptClientCodegenTest {
 
     @Test
     public void testInitialConfigValues() throws Exception {
-        final JavascriptClientCodegen codegen = new JavascriptClientCodegen();
+        final JavaScriptClientCodegen codegen = new JavaScriptClientCodegen();
         codegen.processOpts();
 
         Assert.assertEquals(codegen.additionalProperties().get(CodegenConstants.HIDE_GENERATION_TIMESTAMP), Boolean.TRUE);
@@ -44,7 +44,7 @@ public class JavascriptClientCodegenTest {
 
     @Test
     public void testSettersForConfigValues() throws Exception {
-        final JavascriptClientCodegen codegen = new JavascriptClientCodegen();
+        final JavaScriptClientCodegen codegen = new JavaScriptClientCodegen();
         codegen.setHideGenerationTimestamp(false);
         codegen.processOpts();
 
@@ -54,7 +54,7 @@ public class JavascriptClientCodegenTest {
 
     @Test
     public void testAdditionalPropertiesPutForConfigValues() throws Exception {
-        final JavascriptClientCodegen codegen = new JavascriptClientCodegen();
+        final JavaScriptClientCodegen codegen = new JavaScriptClientCodegen();
         codegen.additionalProperties().put(CodegenConstants.HIDE_GENERATION_TIMESTAMP, false);
         codegen.processOpts();
 
@@ -65,7 +65,7 @@ public class JavascriptClientCodegenTest {
     @Test(description = "test defaultValueWithParam for model's properties")
     public void bodyParameterTest() {
         final OpenAPI openAPI = TestUtils.parseFlattenSpec("src/test/resources/2_0/petstore.yaml");
-        final JavascriptClientCodegen codegen = new JavascriptClientCodegen();
+        final JavaScriptClientCodegen codegen = new JavaScriptClientCodegen();
         final Schema pet = openAPI.getComponents().getSchemas().get("Pet");
         codegen.setOpenAPI(openAPI);
         final CodegenModel cm = codegen.fromModel("Pet", pet);
@@ -116,7 +116,7 @@ public class JavascriptClientCodegenTest {
     @Test(description = "test multiple file upload collection is correct")
     public void testMultipleFileUpload() throws Exception {
         final OpenAPI openAPI = TestUtils.parseFlattenSpec("src/test/resources/3_0/form-multipart-binary-array.yaml");
-        final JavascriptClientCodegen codegen = new JavascriptClientCodegen();
+        final JavaScriptClientCodegen codegen = new JavaScriptClientCodegen();
         codegen.setOpenAPI(openAPI);
 
         final String requestPath = "/multipart-array";

@@ -18,15 +18,15 @@
 package org.openapitools.codegen.javascript;
 
 import org.openapitools.codegen.CodegenConstants;
-import org.openapitools.codegen.languages.JavascriptClosureAngularClientCodegen;
+import org.openapitools.codegen.languages.JavaScriptClosureAngularClientCodegen;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class JavascriptClosureAngularClientCodegenTest {
+public class JavaScriptClosureAngularClientCodegenTest {
 
     @Test
     public void testInitialConfigValues() throws Exception {
-        final JavascriptClosureAngularClientCodegen codegen = new JavascriptClosureAngularClientCodegen();
+        final JavaScriptClosureAngularClientCodegen codegen = new JavaScriptClosureAngularClientCodegen();
         codegen.processOpts();
 
         Assert.assertEquals(codegen.additionalProperties().get(CodegenConstants.HIDE_GENERATION_TIMESTAMP), Boolean.TRUE);
@@ -35,7 +35,7 @@ public class JavascriptClosureAngularClientCodegenTest {
 
     @Test
     public void testSettersForConfigValues() throws Exception {
-        final JavascriptClosureAngularClientCodegen codegen = new JavascriptClosureAngularClientCodegen();
+        final JavaScriptClosureAngularClientCodegen codegen = new JavaScriptClosureAngularClientCodegen();
         codegen.setHideGenerationTimestamp(false);
         codegen.processOpts();
 
@@ -45,7 +45,7 @@ public class JavascriptClosureAngularClientCodegenTest {
 
     @Test
     public void testAdditionalPropertiesPutForConfigValues() throws Exception {
-        final JavascriptClosureAngularClientCodegen codegen = new JavascriptClosureAngularClientCodegen();
+        final JavaScriptClosureAngularClientCodegen codegen = new JavaScriptClosureAngularClientCodegen();
         codegen.additionalProperties().put(CodegenConstants.HIDE_GENERATION_TIMESTAMP, false);
         codegen.processOpts();
 

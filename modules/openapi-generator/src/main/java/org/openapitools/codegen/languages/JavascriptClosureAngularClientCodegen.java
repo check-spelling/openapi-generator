@@ -31,14 +31,14 @@ import java.util.*;
 
 import static org.openapitools.codegen.utils.StringUtils.camelize;
 
-public class JavascriptClosureAngularClientCodegen extends DefaultCodegen implements CodegenConfig {
-    private final Logger LOGGER = LoggerFactory.getLogger(JavascriptClosureAngularClientCodegen.class);
+public class JavaScriptClosureAngularClientCodegen extends DefaultCodegen implements CodegenConfig {
+    private final Logger LOGGER = LoggerFactory.getLogger(JavaScriptClosureAngularClientCodegen.class);
 
     public static final String USE_ES6 = "useEs6";
 
     protected boolean useEs6;
 
-    public JavascriptClosureAngularClientCodegen() {
+    public JavaScriptClosureAngularClientCodegen() {
         super();
         outputFolder = "generated-code/javascript-closure-angular";
 
@@ -116,14 +116,14 @@ public class JavascriptClosureAngularClientCodegen extends DefaultCodegen implem
         super.preprocessOpenAPI(openAPI);
 
         if (useEs6) {
-            embeddedTemplateDir = templateDir = "Javascript-Closure-Angular/es6";
+            embeddedTemplateDir = templateDir = "JavaScript-Closure-Angular/es6";
             apiPackage = "resources";
             apiTemplateFiles.put("api.mustache", ".js");
             supportingFiles.add(new SupportingFile("module.mustache", "", "module.js"));
         } else {
             modelTemplateFiles.put("model.mustache", ".js");
             apiTemplateFiles.put("api.mustache", ".js");
-            embeddedTemplateDir = templateDir = "Javascript-Closure-Angular";
+            embeddedTemplateDir = templateDir = "JavaScript-Closure-Angular";
             apiPackage = "API.Client";
             modelPackage = "API.Client";
         }
@@ -136,7 +136,7 @@ public class JavascriptClosureAngularClientCodegen extends DefaultCodegen implem
 
     @Override
     public String getHelp() {
-        return "Generates a Javascript AngularJS client library (beta) annotated with Google Closure Compiler annotations" +
+        return "Generates a JavaScript AngularJS client library (beta) annotated with Google Closure Compiler annotations" +
             "(https://developers.google.com/closure/compiler/docs/js-for-compiler?hl=en)";
     }
 

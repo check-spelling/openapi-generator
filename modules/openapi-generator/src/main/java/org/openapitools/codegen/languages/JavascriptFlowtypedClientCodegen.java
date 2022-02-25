@@ -27,12 +27,12 @@ import java.util.*;
 
 import static org.openapitools.codegen.utils.StringUtils.dashize;
 
-public class JavascriptFlowtypedClientCodegen extends AbstractTypeScriptClientCodegen {
+public class JavaScriptFlowtypedClientCodegen extends AbstractTypeScriptClientCodegen {
     public static final String NPM_REPOSITORY = "npmRepository";
 
     protected String npmRepository = null;
 
-    public JavascriptFlowtypedClientCodegen() {
+    public JavaScriptFlowtypedClientCodegen() {
         super();
 
         modifyFeatureSet(features -> features.includeDocumentationFeatures(DocumentationFeature.Readme));
@@ -97,7 +97,7 @@ public class JavascriptFlowtypedClientCodegen extends AbstractTypeScriptClientCo
 
         defaultIncludes = new HashSet<>(languageSpecificPrimitives);
         outputFolder = "generated-code/javascript-flowtyped";
-        embeddedTemplateDir = templateDir = "Javascript-Flowtyped";
+        embeddedTemplateDir = templateDir = "JavaScript-Flowtyped";
 
         this.cliOptions.add(new CliOption(NPM_REPOSITORY, "Use this property to set an url your private npmRepo in the package.json"));
 
@@ -196,7 +196,7 @@ public class JavascriptFlowtypedClientCodegen extends AbstractTypeScriptClientCo
 
     @Override
     public String getHelp() {
-        return "Generates a Javascript client library (beta) using Flow types and Fetch API.";
+        return "Generates a JavaScript client library (beta) using Flow types and Fetch API.";
     }
 
     public String getNpmName() {

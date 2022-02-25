@@ -1,16 +1,16 @@
-package org.openapitools.server.api.verticle
+package org.openapitools.server.api.vertical
 import io.vertx.core.Vertx
-import io.vertx.core.AbstractVerticle
+import io.vertx.core.AbstractVertical
 import io.vertx.serviceproxy.ServiceBinder
 
 fun main(){
-    Vertx.vertx().deployVerticle(StoreApiVerticle())
+    Vertx.vertx().deployVertical(StoreApiVertical())
 }
 
-class StoreApiVerticle:AbstractVerticle() {
+class StoreApiVertical:AbstractVertical() {
 
     override fun start() {
-        val instance = (javaClass.classLoader.loadClass("org.openapitools.server.api.verticle.StoreApiImpl").newInstance() as StoreApi)
+        val instance = (javaClass.classLoader.loadClass("org.openapitools.server.api.vertical.StoreApiImpl").newInstance() as StoreApi)
         instance.init(vertx,config())
         ServiceBinder(vertx)
             .setAddress(StoreApi.address)

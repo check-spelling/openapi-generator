@@ -1,4 +1,4 @@
-package org.openapitools.server.api.verticle
+package org.openapitools.server.api.vertical
 
 import org.openapitools.server.api.model.Order
 import io.vertx.core.Vertx

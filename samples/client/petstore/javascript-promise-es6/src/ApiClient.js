@@ -59,7 +59,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'OpenAPI-Generator/1.0.0/Javascript'
+            'User-Agent': 'OpenAPI-Generator/1.0.0/JavaScript'
         };
 
         /**
@@ -635,7 +635,7 @@ class ApiClient {
                 }
             },
             {
-              'url': "https://127.0.0.1/no_varaible",
+              'url': "https://127.0.0.1/no_variable",
               'description': "The local server without variables",
             }
       ];

@@ -79,12 +79,12 @@ public class JavaVertXServerCodegen extends AbstractJavaCodegen {
 
         apiTemplateFiles.clear();
         apiTemplateFiles.put("api.mustache", ".java");
-        apiTemplateFiles.put("apiVerticle.mustache", "Verticle.java");
+        apiTemplateFiles.put("apiVertical.mustache", "Vertical.java");
         apiTemplateFiles.put("apiException.mustache", "Exception.java");
 
         embeddedTemplateDir = templateDir = "JavaVertXServer";
 
-        apiPackage = rootPackage + ".verticle";
+        apiPackage = rootPackage + ".vertical";
         modelPackage = rootPackage + ".model";
         artifactId = "openapi-java-vertx-server";
         artifactVersion = apiVersion;
@@ -160,9 +160,9 @@ public class JavaVertXServerCodegen extends AbstractJavaCodegen {
 
         supportingFiles.clear();
         supportingFiles.add(new SupportingFile("openapi.mustache", resourceFolder, "openapi.json"));
-        supportingFiles.add(new SupportingFile("MainApiVerticle.mustache",
+        supportingFiles.add(new SupportingFile("MainApiVertical.mustache",
                 sourceFolder + File.separator + rootPackage.replace(".", File.separator),
-                "MainApiVerticle.java"));
+                "MainApiVertical.java"));
         supportingFiles.add(new SupportingFile("MainApiException.mustache",
                 sourceFolder + File.separator + rootPackage.replace(".", File.separator),
                 "MainApiException.java"));

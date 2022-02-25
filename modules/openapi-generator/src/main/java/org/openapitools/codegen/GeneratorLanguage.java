@@ -27,7 +27,7 @@ public enum GeneratorLanguage {
     CLOJURE("Clojure"), C_PLUS_PLUS("C++"), CRYSTAL("Crystal"), C_SHARP("C#"),
     DART("Dart"), EIFFEL("Eiffel"), ELIXIR("Elixir"), ELM("Elm"),
     ERLANG("Erlang"), FLASH("Flash"), F_SHARP("F#"), GO("Go"),
-    JAVASCRIPT("Javascript"), GRAPH_QL("GraphQL"), GROOVY("Groovy"),
+    JAVASCRIPT("JavaScript"), GRAPH_QL("GraphQL"), GROOVY("Groovy"),
     HASKELL("Haskell"), TYPESCRIPT("Typescript"), K_SIX("k6"), KOTLIN("Kotlin"),
     KTORM("Ktorm"), LUA("Lua"), MYSQL("Mysql"), NIM("Nim"),
     OBJECTIVE_C("Objective-C"), OCAML("OCaml"), PERL("Perl"), PHP("PHP"),
